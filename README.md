@@ -49,7 +49,7 @@ Once this repository is cloned, install the packages below in order to run the p
 - Install required python packages ^
 - Run WinAppDriver.exe (for calculator example)
 - Run .\run.bat to view calculator example
-- Edit run.bat to comment out the calculator example and uncomment the webpage example
+- Edit run.bat to comment out the calculator example and uncomment the webpage example (close WinAppDriver.exe)
 - Run .\run.bat to view webpage example
 **********************************************************************************************
 ## Resources: Guides, Videos, Documentation
