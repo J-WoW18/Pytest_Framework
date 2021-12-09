@@ -1,0 +1,69 @@
+# @pytest.hookimpl(hookwrapper=True)
+# def pytest_runtest_makereport(item):
+#     #driver = setup(browser)
+#     pytest_html = item.config.pluginmanager.getplugin("html")
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, "extra", [])
+#     if report.when == "call":
+#         # always add url to report
+#         #extra.append(pytest_html.extras.url("http://www.example.com/"))
+#         xfail = hasattr(report, "wasxfail")
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             report_directory = os.path.dirname(item.config.option.htmlpath)
+#             file_name = report.nodeid.replace("::", "_") + ".png"
+#             destinationFile = os.path.join(report_directory, file_name)
+#             driver.save_screenshot(destinationFile)
+#             if file_name:
+#                 html ='<div><img src="%s" alt="screenshot" style="width:300px;height=200px" onclick="window.open(this.src)"align="right"/></div>'%file_name
+#             extra.append(pytest_html.extras.html(html))
+#         report.extra = extra
+
+# @pytest.mark.hookwrapper
+# def pytest_runtest_makereport(item, call):
+#
+#     #timestamp = datetime.now().strftime('%H-%M-%S')
+#
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#
+#         feature_request = item.funcargs['request']
+#         report_directory = os.path.dirname(item.config.option.htmlpath)
+#         file_name = report.nodeid.replace("::", "_") + ".png"
+#         destinationFile = os.path.join(report_directory, file_name)
+#         driver = feature_request.getfixturevalue('setup')
+#         driver.save_screenshot(destinationFile)
+#         extra.append(pytest_html.extras.image(destinationFile))
+#
+#         # always add url to report
+#         extra.append(pytest_html.extras.url('http://www.example.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             extra.append(pytest_html.extras.image(destinationFile))
+#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+#         report.extra = extra
+
+# @pytest.hookimpl(hookwrapper=True)
+# def pytest_runtest_makereport(item, call):
+#     timestamp = datetime.now().strftime('%H-%M-%S')
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call':
+#         feature_request = item.funcargs['request']
+#         driver = feature_request.getfixturevalue('setup')
+#         driver.save_screenshot('Screenshots/scr' + timestamp + '.png')
+#         extra.append(pytest_html.extras.image('Screenshots/scr' + timestamp + '.png'))
+#         extra.append(pytest_html.extras.url('http://www.example.com/'))
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             # only add additional html on failure
+#             extra.append(pytest_html.extras.image('Screenshots/scr.png'))
+#             extra.append(pytest_html.extras.html('<div>Additional HTML</div>'))
+#        report.extra = extra
