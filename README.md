@@ -1,4 +1,4 @@
-# PyTest_Selenium_Framework_Template
+# Pytest_Framework
 - Template repository for PyTest &amp; Selenium framework for test automation. 
 - Elliot Erstein, 8 Dec 2021
 **********************************************************************************************
