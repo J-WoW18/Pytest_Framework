@@ -34,20 +34,23 @@
   - https://git-scm.com/downloads
   - Install
 **********************************************************************************************
+## Git commands to clone this repository to local machine
+git clone https://github.com/J-WoW18/Pytest_Framework.git
+**********************************************************************************************
 ## Required python packages
-If this template is used, the required python packages are already installed in the virtual environment so this step is not needed. If starting from scratch, install the following packages in python.
-install appium >> 
+Once this repository is cloned, install the packages below in order to run the pytest framework. 
 - pip install appium-python-client==1.3.0
   - The latest appium versions (2.1 & 2.0) use selenium 4.0 which would not run WinAppDriver correctly.
 - pip install pytest pytest-html pytest-xdist Openpyxl
 **********************************************************************************************
-## Git commands for initial setup (JWOW repository only)
-git init
-git config --global user.email "{ID}+J-WoW18@users.noreply.github.com"
-git add -A
-git commit -m "First commit"
-git remote add origin https://github.com/J-WoW18/PyTest_Selenium_Framework_Template.git 
-git push origin master
+## Steps to get project up and running
+- Create Pycharm project w/ venv
+- Run git clone command ^^
+- Install required python packages ^
+- Run WinAppDriver.exe (for calculator example)
+- Run .\run.bat to view calculator example
+- Edit run.bat to comment out the calculator example and uncomment the webpage example
+- Run .\run.bat to view webpage example
 **********************************************************************************************
 ## Resources: Guides, Videos, Documentation
 - https://testautomationu.applitools.com/winappdriver-tutorial/ -- Tutorial video series for the calculator example
