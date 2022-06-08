@@ -23,6 +23,7 @@
 - PyCharm IDE
   - https://www.jetbrains.com/pycharm/download/#section=windows
   - Install >> Add Bin to PATH
+  - Observed Issue of not activating vEnv >> File>Settings>Tools>Terminal> change shell path to cmd.exe and restart pycharm
 - Win10 SDK package (10.0.22000.194)
   - https://developer.microsoft.com/en-us/windows/downloads/windows-sdk/
   - This is for the inspect.exe to find UI elements in windows applications
